@@ -1,9 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profil</ion-title>
+<ion-header no-border>
+  <ion-toolbar no-padding>
+    <div class="header-container" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="username-box" fxFlex="none" fxLayoutAlign="start center">
+        <ion-select value="mmr" no-padding>
+          <ion-select-option value="mmr">Muzakky_R</ion-select-option>
+          <ion-select-option value="kky">Kakaye</ion-select-option>
+          <ion-select-option value="smv">Smaver</ion-select-option>        
+        </ion-select>
+      </div>
+      <div class="menu-box" fxLayoutGap="8px" fxLayoutAlign="start center" fxFlex="none">
+        <img src="assets/instagram/history_archive.svg">
+        <ion-icon name="menu"></ion-icon>     
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <div class="container">
+    
+    <!-- visitor section -->
+    <div class="visitor-box" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="4px">
+      <ion-label class="primary-text" color="primary">113</ion-label>
+      <ion-label class="secondary-text" color="sText">profile visits in the last 7 days</ion-label>
+    </div>
+
+    <!-- User info section -->
+    <div class="userinfo-box" fxLayout="row" fxLayoutAlign="space-between center">
+
+      <div class="avatar-box" fxFlex="none" fxLayoutAlign="center center">
+        <img src="assets/instagram/profil.png">
+      </div>
+
+      <div class="statistic-wrapper" fxFlex="none" fxLayout="column">
+        <div class="statistic-box" fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="end ">
+
+          <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
+            <ion-label class="primary-text">13</ion-label>
+            <ion-label class="secondary-text">posts</ion-label>
+          </div>
+
+          <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
+            <ion-label class="primary-text">1103</ion-label>
+            <ion-label class="secondary-text">Followers</ion-label>
+          </div>
+
+          <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
+            <ion-label class="primary-text">8037</ion-label>
+            <ion-label class="secondary-text">Following</ion-label>
+          </div>
+
+        </div>
+
+        <div class="button-box" fxLayout="row" fxLayoutGap="5px">
+          <button fxFlex="" class="primary-text">Promotions</button>
+          <button fxFlex="" class="primary-text">Edit Profil</button>          
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
 </ion-content>
