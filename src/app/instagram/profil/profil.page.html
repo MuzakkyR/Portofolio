@@ -22,7 +22,7 @@
     
     <!-- visitor section -->
     <div class="visitor-box" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="4px">
-      <ion-label class="primary-text" color="primary">113</ion-label>
+      <ion-label class="bold-text" color="bold">113</ion-label>
       <ion-label class="secondary-text" color="sText">profile visits in the last 7 days</ion-label>
     </div>
 
@@ -37,30 +37,81 @@
         <div class="statistic-box" fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="end ">
 
           <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
-            <ion-label class="primary-text">13</ion-label>
+            <ion-label class="bold-text">13</ion-label>
             <ion-label class="secondary-text">posts</ion-label>
           </div>
 
           <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
-            <ion-label class="primary-text">1103</ion-label>
+            <ion-label class="bold-text">1103</ion-label>
             <ion-label class="secondary-text">Followers</ion-label>
           </div>
 
           <div class="data-section" fxLayoutAlign="center center" fxLayout="column">
-            <ion-label class="primary-text">8037</ion-label>
+            <ion-label class="bold-text">8037</ion-label>
             <ion-label class="secondary-text">Following</ion-label>
           </div>
 
         </div>
 
         <div class="button-box" fxLayout="row" fxLayoutGap="5px">
-          <button fxFlex="" class="primary-text">Promotions</button>
-          <button fxFlex="" class="primary-text">Edit Profil</button>          
+          <button fxFlex="" class="bold-text">Promotions</button>
+          <button fxFlex="" class="bold-text">Edit Profil</button>          
         </div>
 
       </div>
 
     </div>
+
+    <!-- user desc section -->
+    <div class="userdesc-box" fxLayout="column">
+      <ion-label class="bold-text">Muhamad Muzakky Rabbani</ion-label>
+      <ion-label class="secondary-text">Personal Blog</ion-label>
+      <ion-label class="primary-text">UI/UX Engineer at Greatday HR</ion-label>
+    </div>
+
+    <!-- story archieve section -->
+    <div class="story-wrapper" fxLayout="row" fxLayoutGap="14px">
+      <div class="story-box" *ngFor="let item of storyArchieve" fxLayoutAlign="center center" fxLayout="column" fxFlex="56px">
+        <div class="story-section" fxLayoutAlign="center center" fxLayout="row">
+          <img [ngStyle]="{'width.px':item.name == 'New' ? 27 : 50, 'height.px':item.name == 'New' ? 27 : 50}" src={{item.thumbnail}}>
+        </div>
+        <ion-label class="primary-text">{{ item.name }}</ion-label>
+      </div>
+    </div>
+
+    <!-- CTA section -->
+    <div class="cta-box" fxLayout="row">
+      <div fxLayout="row" class="cta-section" *ngFor="let unit of cta; last as i" fxFlex="" fxLayoutAlign="center center">
+        <button [ngClass]="{'borderRight': !i}">{{ unit }}</button>
+      </div>
+    </div>
+
+    <!-- timeline option section -->
+    <div class="timelineoption-box" fxLayout="row" fxLayoutAlign="space-around start">
+      <div class="timelineoption-section" *ngFor="let option of timelineOption" fxFlex="" fxLayoutAlign="center start">
+        <ion-icon name={{option}}></ion-icon>
+      </div>
+    </div>
+
+    <div class="post-box" fxLayout="row">
+      <div class="post-section" *ngFor="let post of postList" fxFlex="33.33%">
+        <img src={{post}}>
+      </div>
+    </div>
+
   </div>
 
 </ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar no-padding>
+    <div class="footer-container" fxLayout="row" fxLayoutAlign="space-between start">
+      <div class="footericon-box" *ngFor="let icon of footerIcon" fxLayoutAlign="center center">
+        <ion-icon name={{icon}}></ion-icon>
+      </div>
+      <div class="personalicon-box" fxLayoutAlign="center center">
+        <img src="assets/instagram/profil.png">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
