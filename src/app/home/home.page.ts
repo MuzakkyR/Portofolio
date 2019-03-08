@@ -7,12 +7,23 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(public Router: Router) { 
+  public halaman:any = [];
 
+  constructor(public Router: Router) { 
+    this.halaman = [
+      {
+        name:"Instagram",
+        url:"instagram/profil"
+      },
+      {
+        name:"XL",
+        url:"xl/dashboard"
+      }
+    ]
   }
 
-  toInstagram(){
-    this.Router.navigate(['instagram/profil'])
+  toPage(url:string){
+    this.Router.navigate([url])
     console.log("konci")
   }
 }

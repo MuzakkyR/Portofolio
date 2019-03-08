@@ -9,7 +9,9 @@
 <ion-content padding>
 
   <div fxLayout="row">
-    <button (click)="toInstagram()" ion-button>Instagram</button>
+    <div class="container" *ngFor="let item of halaman" fxLayout="row">
+      <ion-button (click)="toPage(item.url)" ion-button>{{item.name}}</ion-button>
+    </div>
   </div>
 
 </ion-content>

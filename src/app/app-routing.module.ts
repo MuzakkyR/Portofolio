@@ -5,6 +5,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'instagram/profil', loadChildren: './instagram/profil/profil.module#ProfilPageModule' },
+  { path: 'xl/dashboard', loadChildren: './xl/dashboard/dashboard.module#DashboardPageModule' },
+
 
 ];
 
