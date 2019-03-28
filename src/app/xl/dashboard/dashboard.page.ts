@@ -7,7 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPage implements OnInit {
 
-  constructor() { }
+  period:any=Date.now();
+  dataUsage:any = []
+
+  constructor() {
+    this.dataUsage = [
+      {
+        icon:'swap',
+        val:7.7,
+        ext:'GB'
+      },
+      {
+        icon:'call',
+        val:20,
+        ext:'min(s)'
+      },
+      {
+        icon:'chatboxes',
+        val:null,
+        ext:'SMS'
+      }
+    ]
+   }
 
   ngOnInit() {
   }

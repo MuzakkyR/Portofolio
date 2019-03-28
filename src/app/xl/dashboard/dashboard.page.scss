@@ -8,12 +8,15 @@
 .secondary-text{
     color: var(--secondary-text);    
 }
+.dim-text{
+    color: var(--dim-text);
+}
 
 
 ion-header{
     .container-header{
         padding:10px 12px;
-        background-color:rgba(0, 0, 174, 1) !important;
+        background-color:var(--primary-axiata) !important;
         ion-title{
             color: white;
             font-size: 17px;
@@ -35,12 +38,83 @@ ion-header{
         }
         div{
             ion-label{
-                font-size: 13px;
+                font-size: 0.86rem;
             }
             ion-label:nth-child(1){
                 margin-bottom: 2px;
             }
             
+        }
+    }
+}
+
+ion-content{
+    --ion-background-color:#ddd;
+
+    .box{
+        background: white;
+        padding:12px;
+        border-radius:6px;
+    }
+
+    .balance-box{
+        margin-bottom: 12px;
+        .title-card{
+            font-size: 0.9rem;
+        }
+        .balance-section{
+            padding:3px 0;
+            ion-label{
+                font-size: 1.2rem;
+            }
+            button{
+                border:1.1px solid var(--primary-axiata);
+                text-transform: uppercase;
+                color: var(--primary-axiata);
+                background: white;
+                padding:8px 10px;
+                border-radius:4px;
+            }
+        }
+        .period-section{
+            ion-icon{
+                color: #05c790;
+            }
+            ion-icon, ion-label{
+                font-size: 0.76rem;
+            }
+        }
+    }
+
+    .kuota-box{
+        .title-section{
+            ion-label{
+                font-size: 0.86rem;
+            }
+        }
+        .bar-section{
+            padding:8px;
+            border-radius:4px;
+            background:#05c790;
+            ion-label{
+                color: white;
+                font-size: 0.8rem;
+            }
+        }
+        .usage-section{
+            .value-section{
+                // height: 47px;
+                ion-icon{
+                    color:red;
+                    font-size: 0.86rem;
+                }
+                .val{
+                    font-size: 1.4rem;
+                }
+                .ext{
+                    font-size: 0.86rem;
+                }
+            }
         }
     }
 }

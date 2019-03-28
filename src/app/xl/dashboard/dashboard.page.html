@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <div class="container-header" fxLayout="row" fxLayoutAlign="space-between center">
     <ion-icon name="help-circle-outline"></ion-icon>
     <ion-title text-center>myXL</ion-title>
@@ -15,5 +15,39 @@
 </ion-header>
 
 <ion-content padding>
+
+  <div class="balance-box box">
+    <ion-label class="title-card">Remaining Balance</ion-label>
+    <div class="balance-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <ion-label>IDR 123.000</ion-label>
+      <button ion-button outline>Top up</button>
+    </div>    
+    <div class="period-section" fxLayout="row" fxLayoutGap="4px">
+      <ion-icon name="star"></ion-icon>
+      <ion-label class="dim-text">Until</ion-label>
+      <ion-label>{{ period | date:'mediumDate' }} - 123 day(s) </ion-label>
+    </div>
+  </div>
+
+  <div class="kuota-box box" fxLayout="column" fxLayoutGap="6px">
+    <div class="title-section" fxLayout="row" fxLayoutAlign="space-between start">
+      <ion-label class="primary-text">Remaining Quote</ion-label>
+      <ion-label class="dim-text">See detail ></ion-label>
+    </div>
+    <div class="bar-section" fxLayout="row" fxLayoutAlign="space-between start">
+      <ion-label>0 GB</ion-label>
+      <ion-label>10 GB</ion-label>
+    </div>
+    <div class="usage-section" fxLayout="row" fxLayoutAlign="space-around start">
+      <div class="data-section" fxLayout="column" fxLayoutAlign="start center" *ngFor="let usage of dataUsage" fxLayoutGap="6px">
+        <ion-icon [ngStyle]="{'transform' : usage.icon == 'swap' ? 'rotate(90deg)' : 'rotate(0deg)'}" name={{usage.icon}}></ion-icon>
+        <div class="value-section" fxLayout="row" fxLayoutAlign="center end">
+          <ion-label class="val" *ngIf="usage.val != null">{{usage.val}}</ion-label>
+          <ion-icon *ngIf="usage.val == null" name="add-circle"></ion-icon>
+          <ion-label class="ext">{{usage.ext}}</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </ion-content>
