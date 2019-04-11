@@ -14,12 +14,12 @@ export class DashboardPage implements OnInit {
     this.dataUsage = [
       {
         icon:'swap',
-        val:7.7,
+        val:null,
         ext:'GB'
       },
       {
         icon:'call',
-        val:20,
+        val:null,
         ext:'min(s)'
       },
       {

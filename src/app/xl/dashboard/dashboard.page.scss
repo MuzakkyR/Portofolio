@@ -49,7 +49,7 @@ ion-header{
 }
 
 ion-content{
-    --ion-background-color:#ddd;
+    --ion-background-color:#cad8e2;
 
     .box{
         background: white;
@@ -77,8 +77,11 @@ ion-content{
             }
         }
         .period-section{
-            ion-icon{
-                color: #05c790;
+            .circle{
+                background-color: #05c790;
+                border-radius:200px;
+                width: 5px;
+                height: 5px;
             }
             ion-icon, ion-label{
                 font-size: 0.76rem;
@@ -87,6 +90,7 @@ ion-content{
     }
 
     .kuota-box{
+        margin-bottom: 16px;
         .title-section{
             ion-label{
                 font-size: 0.86rem;
@@ -102,6 +106,17 @@ ion-content{
             }
         }
         .usage-section{
+            .middle-data{
+                border-left:1px solid var(--border-light);
+                border-right:1px solid var(--border-light);
+            }
+            .data-section{
+                padding:0 16px;
+                width: 33%;
+                ion-icon{
+                    font-size: 1.2rem;
+                }
+            }
             .value-section{
                 // height: 47px;
                 ion-icon{
@@ -113,6 +128,29 @@ ion-content{
                 }
                 .ext{
                     font-size: 0.86rem;
+                }
+            }
+        }
+    }
+
+    .feature-box{
+        ion-label{
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        .feature-section{
+            .fitur{
+                background: white;
+                border-radius:6px;
+                padding:10px;
+                width: 33%;
+                ion-icon{
+                    margin-bottom: 5px;
+                    font-size: 24px;
+                }
+                ion-label{
+                    font-size: 12px;
+                    margin-bottom: 0px;
                 }
             }
         }
